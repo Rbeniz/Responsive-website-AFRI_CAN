@@ -1,0 +1,254 @@
+*, ::after, ::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: rgb(164, 163, 163);
+  height: 100%;
+  width: 100%;
+  
+}
+
+.details{
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.3 );
+  backdrop-filter: blur( 4.5px );
+  -webkit-backdrop-filter: blur( 4.5px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+ .logo{
+  background-image: url("https://www.nature-experience-group.com/wp-content/uploads/2016/10/logo-Nature-Experience-2016.png");
+  height: 15em;
+  width: 15em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  position: absolute;
+  top: 10px;
+  left: 4em;
+} 
+
+.illustration{
+  background-image: url("./illustration.png");
+  height: 15em;
+  width: 15em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -50px;
+  right: -20px;
+  animation: anime 1s ease-in-out 0.5s forwards;
+  opacity: 0;
+}
+@keyframes anime {
+  0%{
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  
+  80%{
+    transform: rotate(-160deg);
+    opacity: 0;
+  }
+  90%{
+    transform: rotate(-140deg);
+    opacity: 1;
+  }
+  100%{
+    transform: rotate(-160deg);
+    opacity: 1;
+  }
+
+  
+}
+/* .logo{
+  width: 100px;
+  height: 100px;
+} */
+
+
+
+
+
+.sub-title{
+  font-size: 2em;
+  font-weight: 500;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  text-align: end;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  
+}
+
+
+.title{
+
+  font-size: 10em;
+  margin: 0.3em;
+  text-transform: uppercase;
+  text-align: end;
+  position: absolute;
+  top: 50%;
+  letter-spacing: -10px;
+  background-position:20% 55% ;
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: text1 0.8s ease-in forwards;
+}
+
+@keyframes text1 {
+  0%{
+    opacity: 0;
+    transform: translate(-2em,-50%);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0,-50%);
+  }
+}
+
+
+.txt-box{
+  position: absolute;
+  top: 80vh;
+  margin: 0.3em;
+  color: #f1f1f1;
+  font-size: 1em;
+  line-height: 27px;
+  max-width: 40em;
+  padding: 1em;
+}
+
+.learn-more{
+  color: #f1f1f1;
+  font-size: 1.1em;
+  font-weight: 800;
+  padding: 5px;
+}
+
+section{
+  padding: 2em;
+  color: #1f1f1f;
+  font-size: 1.2em;
+  line-height: 32px;
+  background: #f1f1f1;
+  position: relative;
+  top: 100vh;
+}
+
+section p{
+  max-width: 900px;
+}
+
+.navbar{
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  transition: 0.4s;
+}
+
+.title-suite{
+  font-size: 10em;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  text-align: start;
+  position: absolute;
+  top: 43%;
+  left: 30px;
+  animation: text2 0.8s ease-in forwards;
+  letter-spacing: -10px;
+}
+
+@keyframes text2 {
+  0%{
+    opacity: 0;
+    transform: translate(2em,-50%);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0,-50%);
+  }
+}
+
+/* ---- RESPONSIVE ---- */
+
+@media screen and (max-width: 1000px) {
+  body{
+    font-size: 10px;
+    
+  }
+  .title{
+    letter-spacing: 0px;
+  }
+  .title-suite{
+    letter-spacing: 0px;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  body{
+    font-size: 6px;
+  }
+  .illustration{
+    top: -10px;
+  }
+  .details{
+    width: 80%;
+    height: 70%;
+    min-height: 30em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+  }
+  .sub-title{
+    top: 150px;
+  }
+  .title{
+    top: 230px;
+    text-align: end;
+    left: 10px;
+  }
+  .title-suite{
+    top: 330px;
+    left: 20px;
+  }
+  
+  .txt-box{
+    top: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title{
+    text-align: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  .title{
+    text-align: start;
+  }
+}

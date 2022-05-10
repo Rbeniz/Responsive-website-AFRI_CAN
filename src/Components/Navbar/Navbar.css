@@ -1,0 +1,137 @@
+
+/* .liste{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+.items{
+   list-style-type: none;
+}
+.items a{
+    text-decoration: none;
+    text-transform: uppercase;
+     margin: 20px;
+    color: #F1F1F1;
+    font-size: 20px;
+    cursor: pointer;
+} */
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.liste{
+    width: 100%;
+    text-align: center;
+}
+.items{
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 10px;
+}
+.items a{
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 19px;
+}
+
+
+/* -----menu hamburger------ */
+.menu{
+    /* background: teal; */
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+}
+.box{
+    /* background: salmon; */
+     height: 30px;
+     width: 40px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     cursor: pointer;
+ }
+ 
+ .burger{
+     background: #f1f1f1;
+     height: 4px;
+     width: 100%;
+     border-radius: 5px;
+     position: absolute;
+     transition: all 0.5s ease-in-out ;
+ 
+ }
+ 
+ .burger:nth-child(1){
+     top:0px;
+ }
+ .burger:nth-child(2){
+     top:15px;
+ }
+ .burger:nth-child(3){
+     top:30px;
+ }
+
+@media screen and (max-width:1000px){
+
+/* -----menu hamburger------ */
+    .menu{
+        display: block;
+    }
+
+    .box.toggle .burger:nth-child(1){
+        top: 15px;
+        transform: rotate(135deg);
+    }
+    .box.toggle .burger:nth-child(2){
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    .box.toggle .burger:nth-child(3){
+        top:15px;
+        transform: rotate(-135deg);
+    }
+
+/* -----nav elmts------ */
+nav{
+    width: 100vw;
+    position: absolute;
+    left: -100%;
+    background: rgba(255, 255, 255, 0.427);
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.3 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 1;
+
+}
+.liste{
+    position: relative;
+    top:70px;
+    display: none;
+
+  
+}
+.items{
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    
+   
+}
+.liste.toggle{
+    display: block;
+}
+}
+
+
+
